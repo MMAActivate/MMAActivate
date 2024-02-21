@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    font-family: 'Noto Sans', 'Noto Sans SC', sans-serif;
+}
+
+::-moz-selection {
+    background: #38a7f157;
+    color: white;
+    padding: 20px;
+}
+
+::selection {
+    background: #083655;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #282c34;
+    user-select: none;
+}
+
+a {
+    color: #38a7f1;
+    text-decoration: none;
+    transition: 0.1s;
+
+    &:hover {
+        color: #3c8dbc;
+    }
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid transparent !important;
+    border-radius: 400px;
+    box-sizing: border-box;
+    font-size: 20px;
+    outline: none;
+    transition: 0.1s;
+
+    &:focus {
+        border: 3px solid var(--color) !important;
+    }
+}
+
+.page {
+    padding-top: 100px;
+    max-width: 600px;
+
+    .name {
+        color: #abb2bf;
+        font-size: 27px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .title {
+        color: #38a7f1;
+        font-size: 34px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .notify {
+        transition: all .2s;
+
+        .no {
+            transform-origin: top;
+            color: #abb2bf;
+            font-size: 20px;
+            text-align: left;
+            margin-top: 20px;
+            display: flex;
+            animation: fadeIn 0.3s;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+                margin-right: 20px;
+            }
+
+            button {
+                background-color: #38a7f1;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 500px;
+                float: right;
+                margin-top: 10px;
+                transition: 0.1s;
+
+                &:hover {
+                    background-color: #3c8dbc;
+                }
+            }
+        }
+    }
+
+    .generate {
+        .mathIDs {
+            .info {
+                display: flex;
+                background: #4b5a68;
+                padding: 10px 20px;
+                border-radius: 200px;
+                margin-top: 10px;
+                opacity: 0;
+                animation: fadeIn2 0.2s forwards;
+                transform-origin: top;
+                justify-content: space-around;
+
+                &:nth-child(1) {
+                    animation-delay: 0.05s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.1s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.15s;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 0.25s;
+                }
+
+                .q {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .t {
+                        color: #ffffff96;
+                        font-size: 12px;
+                    }
+
+                    .key {
+                        user-select: all;
+                        color: #e7f2fa;
+                        font-size: 20px;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
